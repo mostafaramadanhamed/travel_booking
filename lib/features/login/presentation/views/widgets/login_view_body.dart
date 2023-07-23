@@ -42,7 +42,7 @@ class LoginViewBody extends StatelessWidget {
                 ],
               ),
               const SizedBox(
-                height: 15,
+                height: 10,
               ),
               TextButton(
                 onPressed: () {},
@@ -55,7 +55,29 @@ class LoginViewBody extends StatelessWidget {
                     backgroundColor: Color(0xFFFB9057),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16))),
-              )
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                Container(height: 2,color: Colors.grey.shade300,width: size.width/7,margin: const EdgeInsets.symmetric(horizontal: 12),),
+                Text('You can Connect With',style: TextStyle(color: Colors.grey.shade600),),
+                Container(height: 2,color: Colors.grey.shade300,width: size.width/7,margin: const EdgeInsets.symmetric(horizontal: 12),),
+                ],
+              ),
+              SizedBox(height: 20,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CircleAvatar(),
+                  SizedBox(width: 12,),
+                  CircleAvatar(),
+                  SizedBox(width: 12,),
+                  CircleAvatar(),
+                ],
+              ),
             ],
           ),
         )
