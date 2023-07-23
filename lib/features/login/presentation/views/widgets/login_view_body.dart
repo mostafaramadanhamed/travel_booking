@@ -78,6 +78,20 @@ class LoginViewBody extends StatelessWidget {
                   CircleAvatar(),
                 ],
               ),
+              SizedBox(height: 20,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text('Don\'t have an account ?',),
+                  TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      'Sign Up',
+                      style: TextStyle(color: Color(0xFFFB9057)),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         )

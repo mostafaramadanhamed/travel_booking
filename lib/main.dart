@@ -14,6 +14,7 @@ class TravelBookingApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Travel Booking App',
+      debugShowCheckedModeBanner: false,
 
       home: LoginView(),
     );
