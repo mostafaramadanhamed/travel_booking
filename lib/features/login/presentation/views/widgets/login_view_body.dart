@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:travel_booking/core/widgets/text_filed.dart';
-import 'package:travel_booking/features/home/presentaion/views/main_view.dart';
+import 'package:travel_booking/features/login/presentation/views/widgets/sign_in_container.dart';
+
+import 'login_button.dart';
+import 'login_widgets.dart';
 
 class LoginViewBody extends StatelessWidget {
   const LoginViewBody({Key? key}) : super(key: key);
@@ -27,40 +30,11 @@ class LoginViewBody extends StatelessWidget {
               const SizedBox(
                 height: 6,
               ),
-              Row(
-                children: [
-                  Checkbox(
-                    value: true,
-                    onChanged: (val) {},
-                    activeColor: const Color(0xFFFB9057),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(6),
-                    ),
-                  ),
-                  const Text('Remember Me'),
-                  const Spacer(),
-                  const Text('Forget Password ?',),
-                ],
-              ),
+             rowCheckBox(),
               const SizedBox(
                 height: 10,
               ),
-              TextButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context){
-                    return MainView();
-                  }));
-                },
-                child: const Text(
-                  'Sign In',
-                  style: TextStyle(color: Colors.white),
-                ),
-                style: TextButton.styleFrom(
-                    minimumSize: Size(size.width, 66),
-                    backgroundColor: const Color(0xFFFB9057),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16))),
-              ),
+              LoginButton(size: size),
               const SizedBox(
                 height: 20,
               ),
@@ -84,67 +58,15 @@ class LoginViewBody extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 20,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text('Don\'t have an account ?',),
-                  TextButton(
-                    onPressed: () {},
-                    child: const Text(
-                      'Sign Up',
-                      style: TextStyle(color: Color(0xFFFB9057)),
-                    ),
-                  ),
-                ],
-              ),
+              dontHaveAccount(),
             ],
           ),
         )
       ],
     );
   }
+
 }
 
-class SignInContainer extends StatelessWidget {
-  const SignInContainer({
-    super.key,
-    required this.size,
-  });
 
-  final Size size;
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: size.height / 4,
-      width: size.width,
-      alignment: Alignment.bottomCenter,
-      padding: const EdgeInsets.symmetric(vertical: 30),
-      decoration: const BoxDecoration(
-          color: Color(0xFF1FC9C2),
-          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(32))),
-      child: const Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Text(
-            'Sign In',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 24,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Text(
-            'Hi, Welcome back! ',
-            style: TextStyle(
-              color: Colors.white,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
