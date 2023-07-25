@@ -1,5 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:travel_booking/core/utils/app_color.dart';
 import 'package:travel_booking/core/widgets/text_filed.dart';
 import 'package:travel_booking/features/login/presentation/views/widgets/sign_in_container.dart';
 
@@ -47,14 +48,14 @@ class LoginViewBody extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 20,),
-              const Row(
+               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CircleAvatar(),
+                  CircleAvatar(child: Icon(FontAwesomeIcons.apple,color: Colors.black,),backgroundColor: AppColor.kBottomNavIconColor.withOpacity(0.2)),
                   SizedBox(width: 12,),
-                  CircleAvatar(),
+                  CircleAvatar(child: Icon(FontAwesomeIcons.google,color: AppColor.kPrimaryColor,),backgroundColor: AppColor.kBottomNavIconColor.withOpacity(0.2)),
                   SizedBox(width: 12,),
-                  CircleAvatar(),
+                  CircleAvatar(child: Icon(FontAwesomeIcons.facebook,color: Colors.blue.shade600,),backgroundColor: AppColor.kBottomNavIconColor.withOpacity(0.2)),
                 ],
               ),
               const SizedBox(height: 20,),

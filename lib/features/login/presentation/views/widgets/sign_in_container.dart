@@ -13,7 +13,7 @@ class SignInContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: size.height / 4,
+      height: size.height / 3.6,
       width: size.width,
       alignment: Alignment.bottomCenter,
       padding: const EdgeInsets.symmetric(vertical: 30),
