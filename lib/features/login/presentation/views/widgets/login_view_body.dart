@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:travel_booking/core/widgets/text_filed.dart';
+import 'package:travel_booking/features/home/presentaion/views/main_view.dart';
 
 class LoginViewBody extends StatelessWidget {
   const LoginViewBody({Key? key}) : super(key: key);
@@ -37,7 +38,7 @@ class LoginViewBody extends StatelessWidget {
                     ),
                   ),
                   const Text('Remember Me'),
-                  Spacer(),
+                  const Spacer(),
                   const Text('Forget Password ?',),
                 ],
               ),
@@ -45,14 +46,18 @@ class LoginViewBody extends StatelessWidget {
                 height: 10,
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return MainView();
+                  }));
+                },
                 child: const Text(
                   'Sign In',
                   style: TextStyle(color: Colors.white),
                 ),
                 style: TextButton.styleFrom(
                     minimumSize: Size(size.width, 66),
-                    backgroundColor: Color(0xFFFB9057),
+                    backgroundColor: const Color(0xFFFB9057),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16))),
               ),
@@ -67,8 +72,8 @@ class LoginViewBody extends StatelessWidget {
                 Container(height: 2,color: Colors.grey.shade300,width: size.width/7,margin: const EdgeInsets.symmetric(horizontal: 12),),
                 ],
               ),
-              SizedBox(height: 20,),
-              Row(
+              const SizedBox(height: 20,),
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   CircleAvatar(),
@@ -78,7 +83,7 @@ class LoginViewBody extends StatelessWidget {
                   CircleAvatar(),
                 ],
               ),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
