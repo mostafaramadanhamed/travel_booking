@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:travel_booking/core/utils/app_color.dart';
 
 class HotelDetailsView extends StatelessWidget {
   const HotelDetailsView({Key? key}) : super(key: key);
@@ -28,16 +30,115 @@ class HotelDetailsView extends StatelessWidget {
         elevation: 0,
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
+        padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-           MainImage(size: size),
-            const HotelName(),
-
+            MainImage(size: size),
+            HotelNameAndPrice(),
+            const SizedBox(height: 10,),
+             Row(
+              children: [
+                Icon(Icons.location_on_rounded,size: 26,color: Colors.grey.shade800,),
+                const SizedBox(width: 5,),
+                Text('New York, USA',style:TextStyle(
+                  color: Colors.grey.shade800,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 18,
+                ),),
+              ],
+            ),
+            const SizedBox(height: 10,),
+            const Center(
+                child: Text(
+              "     -   -    -    -   -    -    -   -    -   -    -    -    -   -    -   -",
+              maxLines: 1,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: AppColor.kBottomNavIconColor,
+              ),
+            )),
+            const SizedBox(height: 10,),
+            Reviews(),
+            const SizedBox(height: 10,),
+            const Center(
+                child: Text(
+                  "     -   -    -    -   -    -    -   -    -   -    -    -    -   -    -   -",
+                  maxLines: 1,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: AppColor.kBottomNavIconColor,
+                  ),
+                )),
+            const SizedBox(height: 10,),
           ],
         ),
       ),
+    );
+  }
+}
+
+class Reviews extends StatelessWidget {
+  const Reviews({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Row(
+     children: [
+       Icon(FontAwesomeIcons.solidStar,color: Colors.amber,size: 15,),
+       SizedBox(width:6.3 ,),
+       Text('4.9',style: TextStyle(
+         fontSize: 20,
+       ),),
+       Text(' (3241  reviews)  ',style: TextStyle(
+         fontSize: 20,
+       ),),
+       Spacer(),
+       Text('See All',style: TextStyle(
+         color: AppColor.kSecondaryColor,
+         fontSize: 18,
+         fontWeight: FontWeight.w600,
+       ),),
+     ],
+           );
+  }
+}
+
+class HotelNameAndPrice extends StatelessWidget {
+  const HotelNameAndPrice({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        const HotelName(),
+        RichText(
+          text: const TextSpan(
+            children: [
+              TextSpan(
+                text: '143\$',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              TextSpan(
+                text: ' /night',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 14,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }
@@ -49,10 +150,13 @@ class HotelName extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text("Grand Luxury\'s",style: TextStyle(
-      fontSize: 22,
-      fontWeight: FontWeight.bold,
-    ),);
+    return const Text(
+      "Grand Luxury's",
+      style: TextStyle(
+        fontSize: 22,
+        fontWeight: FontWeight.bold,
+      ),
+    );
   }
 }
 
@@ -69,14 +173,16 @@ class MainImage extends StatelessWidget {
     return Container(
       alignment: Alignment.bottomCenter,
       width: size.width,
-      height: size.height/2.5,
+      height: size.height / 2.5,
       margin: EdgeInsets.only(bottom: 20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
-        image:DecorationImage(image: NetworkImage(  'https://img.freepik.com/free-photo/luxury-classic-modern-bedroom-suite-hotel_105762-1787.jpg?size=626&ext=jpg&uid=R76923949&ga=GA1.1.409472889.1674466048&semt=sph',
-        ),
+        image: DecorationImage(
+          image: NetworkImage(
+            'https://img.freepik.com/free-photo/luxury-classic-modern-bedroom-suite-hotel_105762-1787.jpg?size=626&ext=jpg&uid=R76923949&ga=GA1.1.409472889.1674466048&semt=sph',
+          ),
           fit: BoxFit.cover,
-        ) ,
+        ),
       ),
       child: SubImages(size: size),
     );
@@ -98,56 +204,86 @@ class SubImages extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-        Container(height: size.height/12,width: size.width/6,
-        clipBehavior: Clip.antiAliasWithSaveLayer,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(width: 6,color: Colors.white70),
-          image: DecorationImage(image: NetworkImage('https://img.freepik.com/free-photo/type-entertainment-complex-popular-resort-with-pools-water-parks-turkey-with-more-than-5-million-visitors-year-amara-dolce-vita-luxury-hotel-resort-tekirova-kemer_146671-18728.jpg?size=626&ext=jpg&uid=R76923949&ga=GA1.1.409472889.1674466048&semt=sph',),
-          fit: BoxFit.cover,
-          )
-        ),
-        ),
-        Container(height: size.height/12,width: size.width/6,
-        clipBehavior: Clip.antiAliasWithSaveLayer,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(width: 6,color: Colors.white70),
-          image: DecorationImage(image: NetworkImage('https://img.freepik.com/free-photo/view-dubai-marina-sunrise-uae_268835-1056.jpg?size=626&ext=jpg&uid=R76923949&ga=GA1.1.409472889.1674466048&semt=sph',),
-          fit: BoxFit.cover,
-          )
-        ),
-        ),
-        Container(height: size.height/12,width: size.width/6,
-        clipBehavior: Clip.antiAliasWithSaveLayer,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(width: 6,color: Colors.white70),
-          image: DecorationImage(image: NetworkImage('https://img.freepik.com/free-photo/croissant-boiled-egg-orange-juice-yogurt-breakfast-tray-bed-hotel-room_176474-2601.jpg?size=626&ext=jpg&uid=R76923949&ga=GA1.1.409472889.1674466048&semt=sph',),
-          fit: BoxFit.cover,
-          )
-        ),
-        ),
-        Container(height: size.height/12,width: size.width/6,
-        clipBehavior: Clip.antiAliasWithSaveLayer,
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(width: 6,color: Colors.white70,),
-          image: DecorationImage(image: NetworkImage('https://img.freepik.com/free-photo/beautiful-umbrella-chair-around-swimming-pool-hotel-resort_74190-2153.jpg?w=740&t=st=1690365578~exp=1690366178~hmac=09ad2fb6b64a2893ef004584af7533c41bd88e677d4e739ebb0b3bbb548dfb8e',),
-          fit: BoxFit.cover,
+          Container(
+            height: size.height / 12,
+            width: size.width / 6,
+            clipBehavior: Clip.antiAliasWithSaveLayer,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(width: 6, color: Colors.white70),
+                image: DecorationImage(
+                  image: NetworkImage(
+                    'https://img.freepik.com/free-photo/type-entertainment-complex-popular-resort-with-pools-water-parks-turkey-with-more-than-5-million-visitors-year-amara-dolce-vita-luxury-hotel-resort-tekirova-kemer_146671-18728.jpg?size=626&ext=jpg&uid=R76923949&ga=GA1.1.409472889.1674466048&semt=sph',
+                  ),
+                  fit: BoxFit.cover,
+                )),
           ),
-        ),
-          child: Container(height:size.height/12,width:size.width/6,
-
-              decoration: BoxDecoration(
-                gradient: LinearGradient(colors: [Colors.black,Colors.black54]),
-                borderRadius: BorderRadius.circular(8),
+          Container(
+            height: size.height / 12,
+            width: size.width / 6,
+            clipBehavior: Clip.antiAliasWithSaveLayer,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(width: 6, color: Colors.white70),
+                image: DecorationImage(
+                  image: NetworkImage(
+                    'https://img.freepik.com/free-photo/view-dubai-marina-sunrise-uae_268835-1056.jpg?size=626&ext=jpg&uid=R76923949&ga=GA1.1.409472889.1674466048&semt=sph',
+                  ),
+                  fit: BoxFit.cover,
+                )),
+          ),
+          Container(
+            height: size.height / 12,
+            width: size.width / 6,
+            clipBehavior: Clip.antiAliasWithSaveLayer,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(width: 6, color: Colors.white70),
+                image: DecorationImage(
+                  image: NetworkImage(
+                    'https://img.freepik.com/free-photo/croissant-boiled-egg-orange-juice-yogurt-breakfast-tray-bed-hotel-room_176474-2601.jpg?size=626&ext=jpg&uid=R76923949&ga=GA1.1.409472889.1674466048&semt=sph',
+                  ),
+                  fit: BoxFit.cover,
+                )),
+          ),
+          Container(
+            height: size.height / 12,
+            width: size.width / 6,
+            clipBehavior: Clip.antiAliasWithSaveLayer,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(
+                width: 6,
                 color: Colors.white70,
               ),
-              child: Center(child: Text('+8',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 22,color: Colors.white),))),
-        ),
-      ],),
+              image: DecorationImage(
+                image: NetworkImage(
+                  'https://img.freepik.com/free-photo/beautiful-umbrella-chair-around-swimming-pool-hotel-resort_74190-2153.jpg?w=740&t=st=1690365578~exp=1690366178~hmac=09ad2fb6b64a2893ef004584af7533c41bd88e677d4e739ebb0b3bbb548dfb8e',
+                ),
+                fit: BoxFit.cover,
+              ),
+            ),
+            child: Container(
+                height: size.height / 12,
+                width: size.width / 6,
+                decoration: BoxDecoration(
+                  gradient:
+                      LinearGradient(colors: [Colors.black, Colors.black54]),
+                  borderRadius: BorderRadius.circular(8),
+                  color: Colors.white70,
+                ),
+                child: Center(
+                    child: Text(
+                  '+8',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 22,
+                      color: Colors.white),
+                ))),
+          ),
+        ],
+      ),
     );
   }
 }
