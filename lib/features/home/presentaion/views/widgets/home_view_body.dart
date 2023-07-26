@@ -111,14 +111,15 @@ class HomeViewBody extends StatelessWidget {
                         clipBehavior: Clip.antiAliasWithSaveLayer,
                         decoration:  BoxDecoration(
                           color: Colors.white,
-                          // image: const DecorationImage(image: AssetImage(MyAssets.itemPic),
-                          //   fit: BoxFit.fill,),
+
                           borderRadius: BorderRadius.circular(16),
                         ),
                         child: Column(children: [
                           Expanded(flex:3,child: Container(
                             margin: EdgeInsets.only(left: 8,top: 8,right: 8,),
                           decoration: BoxDecoration(borderRadius: BorderRadius.circular(16),
+                              image: const DecorationImage(image: NetworkImage('https://img.freepik.com/free-photo/pier-lake-hallstatt-austria_181624-44201.jpg?w=1060&t=st=1690287804~exp=1690288404~hmac=7735d5dafa455360925ed2e09eed3a2453b1ebbf2066b591ddaf474665296cca'),
+                                fit: BoxFit.fill,),
                             color: Colors.white,
                             boxShadow: [
                               BoxShadow(
@@ -133,8 +134,9 @@ class HomeViewBody extends StatelessWidget {
                           const Expanded(flex: 2,child: Padding(
                             padding: EdgeInsets.all(8.0),
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                BeforeGrid(frisTitle: 'frisTitle')
+                                Text('Lake View')
                               ],
                             ),
                           ),),
