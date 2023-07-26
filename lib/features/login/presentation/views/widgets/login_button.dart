@@ -7,9 +7,10 @@ import '../../../../home/presentaion/views/main_view.dart';
 class LoginButton extends StatelessWidget {
   const LoginButton({
     super.key,
-    required this.size,
+    required this.size, required this.text,
   });
 
+  final String text;
   final Size size;
 
   @override
@@ -20,9 +21,9 @@ class LoginButton extends StatelessWidget {
           return MainView();
         }));
       },
-      child: const Text(
-        'Sign In',
-        style: TextStyle(color: Colors.white),
+      child:  Text(
+        text,
+        style:const TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w600),
       ),
       style: TextButton.styleFrom(
           minimumSize: Size(size.width, 66),

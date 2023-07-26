@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:travel_booking/core/utils/app_color.dart';
+import 'package:travel_booking/features/login/presentation/views/widgets/login_button.dart';
 
 class HotelDetailsView extends StatelessWidget {
   const HotelDetailsView({Key? key}) : super(key: key);
@@ -71,6 +72,21 @@ class HotelDetailsView extends StatelessWidget {
                   ),
                 )),
             const SizedBox(height: 10,),
+            RichText(text: TextSpan(
+              children: [
+                TextSpan(text: 'Information',style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                )),
+                TextSpan(text: '\n I must explain to you how all this mistaken idea of reprobating pleasure and extolling pain arose. To do so, I will give you a complete account of the system, and expound the actual tea',style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 14,
+                )),
+              ]
+            )),
+            const SizedBox(height: 10,),
+            LoginButton(size: size,text: 'Select Room',),
           ],
         ),
       ),

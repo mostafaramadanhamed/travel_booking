@@ -35,7 +35,7 @@ class LoginViewBody extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              LoginButton(size: size),
+              LoginButton(size: size,text: 'Sign In',),
               const SizedBox(
                 height: 20,
               ),
