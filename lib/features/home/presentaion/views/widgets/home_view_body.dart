@@ -34,7 +34,7 @@ class HomeViewBody extends StatelessWidget {
     return Column(
           children: [
             TopContainer(size: size),
-            const SizedBox(height: 30,),
+            const SizedBox(height: 15,),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30.0),
               child: Row(
@@ -55,15 +55,15 @@ class HomeViewBody extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 30.0),
               child: BeforeGrid(frisTitle:'Nearby Me'),
             ),
-            const SizedBox(height: 20,),
+            const SizedBox(height: 10,),
             HListView(size: size),
-            const SizedBox(height: 20,),
+            const SizedBox(height: 10,),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 30.0),
               child: BeforeGrid(frisTitle:'Popular For Me'),
@@ -87,7 +87,7 @@ class HomeViewBody extends StatelessWidget {
                       child: Icon(icon,color: AppColor.kPrimaryColor,),
                     ),
                     const SizedBox(height: 7,),
-                    Text(categories),
+                    Text(categories,style: TextStyle(fontWeight: FontWeight.w600),),
                   ],
                 ),
               );
@@ -114,7 +114,7 @@ class VListViewTrips extends StatelessWidget {
     GestureDetector(
       onTap: (){
         Navigator.push(context, MaterialPageRoute(builder:
-            (context)=> HotelDetailsView() ,
+            (context)=> const HotelDetailsView() ,
         ),);
       },
       child: Container(
@@ -281,7 +281,7 @@ class HListView extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 30.0),
       child: SizedBox(
-        height: size.height/3.7,
+        height: size.height/3.4,
         child: ListView.builder(
           physics: const BouncingScrollPhysics(),
           scrollDirection: Axis.horizontal,
@@ -387,8 +387,8 @@ final String frisTitle;
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Text(frisTitle,style: const TextStyle(
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
+          fontSize: 19,
+          fontWeight: FontWeight.w600,
         ),),
         const Spacer(),
         const  Text('See All',style: TextStyle(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'features/login/presentation/views/login.dart';
 
@@ -15,6 +16,9 @@ class TravelBookingApp extends StatelessWidget {
     return  MaterialApp(
       title: 'Travel Booking App',
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        textTheme: GoogleFonts.poppinsTextTheme(),
+      ),
       home: LoginView(),
     );
   }
