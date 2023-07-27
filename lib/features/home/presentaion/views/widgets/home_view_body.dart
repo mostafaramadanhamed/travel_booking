@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:travel_booking/core/utils/app_color.dart';
 import 'package:travel_booking/core/widgets/text_filed.dart';
 import 'package:travel_booking/features/home/presentaion/views/hotel_details_view.dart';
+import 'package:travel_booking/features/hotels/presentation/views/hotel_view.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({Key? key}) : super(key: key);
@@ -21,7 +22,7 @@ class HomeViewBody extends StatelessWidget {
     return CustomScrollView(
       slivers: [
         SliverToBoxAdapter(
-          child: buildNonScrollable(size, categories),
+          child: buildNonScrollable(size, categories,context),
         ),
         SliverFillRemaining(
           child: VListViewTrips(size: size),
@@ -44,7 +45,7 @@ class HomeViewBody extends StatelessWidget {
                   InkWell(
                     onTap: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context){
-                        return ();
+                        return const HotelView();
                       }));
                     },
                       child
@@ -120,9 +121,9 @@ class VListViewTrips extends StatelessWidget {
     child:
     GestureDetector(
       onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder:
-            (context)=> const HotelDetailsView() ,
-        ),);
+        // Navigator.push(context, MaterialPageRoute(builder:
+        //     (context)=> const HotelDetailsView() ,
+        // ),);
       },
       child: Container(
         decoration: BoxDecoration(

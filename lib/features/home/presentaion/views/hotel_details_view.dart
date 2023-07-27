@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:travel_booking/core/utils/app_color.dart';
+import 'package:travel_booking/features/hotels/presentation/views/select_room_view.dart';
 import 'package:travel_booking/features/login/presentation/views/widgets/login_button.dart';
 
 class HotelDetailsView extends StatelessWidget {
@@ -98,7 +99,7 @@ class HotelDetailsView extends StatelessWidget {
               ),
             ),
             LoginButton(size: size,text: 'Select Room',onPressed: (){
-
+              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const SelectRoomView(),));
             },),
             const SizedBox(height: 20,),
           ],
@@ -183,15 +184,15 @@ class Reviews extends StatelessWidget {
        Icon(FontAwesomeIcons.solidStar,color: Colors.amber,size: 15,),
        SizedBox(width:6.3 ,),
        Text('4.9',style: TextStyle(
-         fontSize: 20,
+         fontSize: 16,
        ),),
        Text(' (3241  reviews)  ',style: TextStyle(
-         fontSize: 20,
+         fontSize: 16,
        ),),
        Spacer(),
        Text('See All',style: TextStyle(
          color: AppColor.kSecondaryColor,
-         fontSize: 18,
+         fontSize: 16,
          fontWeight: FontWeight.w600,
        ),),
      ],

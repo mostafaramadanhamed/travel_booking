@@ -9,7 +9,7 @@ class  HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColor.kBottomNavIconColor.withOpacity(.1),
-      body:HomeViewBody() ,
+      body:const HomeViewBody() ,
     );
   }
 }

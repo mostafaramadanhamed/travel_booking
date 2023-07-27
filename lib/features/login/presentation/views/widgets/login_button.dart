@@ -23,6 +23,7 @@ class LoginButton extends StatelessWidget {
         style:const TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w600),
       ),
       style: TextButton.styleFrom(
+
           minimumSize: Size(size.width, 66),
           backgroundColor: const Color(0xFFFB9057),
           shape: RoundedRectangleBorder(
