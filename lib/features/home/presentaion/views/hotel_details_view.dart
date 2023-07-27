@@ -150,17 +150,17 @@ SizedBox buildCategoryItem(Size size,String categories,{required IconData icon,}
     child: Column(
       children: [
         Container(
-          height: size.height/16,
-          width: size.width/8,
+          height: size.height/22,
+          width: size.width/11,
 
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
             color: AppColor.kPrimaryColor.withOpacity(0.2),
           ),
-          child: Icon(icon,color: AppColor.kPrimaryColor,size: 22,),
+          child: Icon(icon,color: AppColor.kPrimaryColor,size: 20,),
         ),
         const SizedBox(height: 7,),
-        Text(categories,style: const TextStyle(fontSize: 10,),),
+        Text(categories,style: const TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
       ],
     ),
   );

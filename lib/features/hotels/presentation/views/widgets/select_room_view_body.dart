@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../core/utils/app_color.dart';
 import '../../../../home/presentaion/views/hotel_details_view.dart';
@@ -21,7 +22,7 @@ class SelectRoomViewBody extends StatelessWidget {
           itemBuilder: (context, index) {
             return Container(
               clipBehavior: Clip.antiAliasWithSaveLayer,
-              height: size.height/2.8,
+              height: size.height/2.7,
               width: double.infinity,
               margin: const EdgeInsets.symmetric(vertical: 20),
               decoration: BoxDecoration(
@@ -76,25 +77,34 @@ class SelectRoomViewBody extends StatelessWidget {
 
                     ],
                   ),
-
-                  const SizedBox(height: 4),
                   Padding(
-                    padding: const EdgeInsets.only(left: 12,right: 12,top: 12,bottom: 4),
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-
+                        Text(
+                          'Non Refundable',
+                          style: TextStyle(fontSize: 16,overflow: TextOverflow.ellipsis),
+                        ),
+                        const SizedBox(height: 6,),
                         Row(
                           children: [
-                            Icon(Icons.location_on_rounded,color: Colors.grey.shade800,),
+                            buildCategoryItem(size, 'Free \nWifi', icon: FontAwesomeIcons.wifi),
+                            const SizedBox(width: 20,),
+                            buildCategoryItem(size, 'Non-\nRefundable', icon: FontAwesomeIcons.dollarSign),
+                            const SizedBox(width: 20,),
+                            buildCategoryItem(size, 'Free \nBreakfast', icon: FontAwesomeIcons.utensils),
+                            const SizedBox(width: 20,),
+
+                            buildCategoryItem(size, 'Non-\nSmoking', icon: FontAwesomeIcons.banSmoking),
+                            const SizedBox(width: 20,),
 
                           ],
                         ),
                         const SizedBox(height: 4,),
-                        const Reviews(),
                         const Center(
                             child: Text(
-                              "     -   -    -    -   -    -    -   -    -   -    -    -    -   -    -   -",
+                              "     -   -    -     -    -    -   -    -   -",
                               maxLines: 1,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
