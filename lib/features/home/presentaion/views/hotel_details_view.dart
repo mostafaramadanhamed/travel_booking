@@ -36,63 +36,140 @@ class HotelDetailsView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             MainImage(size: size),
-            HotelNameAndPrice(),
-            const SizedBox(height: 10,),
-             Row(
-              children: [
-                Icon(Icons.location_on_rounded,size: 26,color: Colors.grey.shade800,),
-                const SizedBox(width: 5,),
-                Text('New York, USA',style:TextStyle(
-                  color: Colors.grey.shade800,
-                  fontWeight: FontWeight.w600,
-                  fontSize: 18,
-                ),),
-              ],
-            ),
-            const SizedBox(height: 10,),
-            const Center(
-                child: Text(
-              "     -   -    -    -   -    -    -   -    -   -    -    -    -   -    -   -",
-              maxLines: 1,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: AppColor.kBottomNavIconColor,
-              ),
-            )),
-            const SizedBox(height: 10,),
-            Reviews(),
-            const SizedBox(height: 10,),
-            const Center(
-                child: Text(
-                  "     -   -    -    -   -    -    -   -    -   -    -    -    -   -    -   -",
-                  maxLines: 1,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: AppColor.kBottomNavIconColor,
+            Expanded(
+              child: ListView(
+                physics: const BouncingScrollPhysics(),
+                children: [
+                  HotelNameAndPrice(),
+                  const SizedBox(height: 10,),
+                  // location
+                  Row(
+                    children: [
+                      Icon(Icons.location_on_rounded,size: 26,color: Colors.grey.shade800,),
+                      const SizedBox(width: 5,),
+                      Text('New York, USA',style:TextStyle(
+                        color: Colors.grey.shade800,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 18,
+                      ),),
+                    ],
                   ),
-                )),
-            const SizedBox(height: 10,),
-            RichText(text: TextSpan(
-              children: [
-                TextSpan(text: 'Information',style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                )),
-                TextSpan(text: '\n I must explain to you how all this mistaken idea of reprobating pleasure and extolling pain arose. To do so, I will give you a complete account of the system, and expound the actual tea',style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 14,
-                )),
-              ]
-            )),
-            const SizedBox(height: 10,),
-            LoginButton(size: size,text: 'Select Room',),
+                  const SizedBox(height: 10,),
+                  // divider
+                  const Center(
+                      child: Text(
+                        "     -   -    -    -   -    -    -   -    -   -    -    -    -   -    -   -",
+                        maxLines: 1,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: AppColor.kBottomNavIconColor,
+                        ),
+                      )),
+                  const SizedBox(height: 10,),
+                  Reviews(),
+                  const SizedBox(height: 10,),
+                  const Center(
+                      child: Text(
+                        "     -   -    -    -   -    -    -   -    -   -    -    -    -   -    -   -",
+                        maxLines: 1,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: AppColor.kBottomNavIconColor,
+                        ),
+                      )),
+                  const SizedBox(height: 10,),
+                  RichText(text: TextSpan(
+                      children: [
+                        TextSpan(text: 'Information',style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        )),
+                        TextSpan(text: '\n I must explain to you how all this mistaken idea of reprobating pleasure and extolling pain arose. To do so, I will give you a complete account of the system, and expound the actual tea',style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 14,
+                        )),
+                      ]
+                  )),
+                  const SizedBox(height: 30,),
+                  FeaturesListViewH(size: size),
+                  const SizedBox(height: 30,),
+                ],
+              ),
+            ),
+            LoginButton(size: size,text: 'Select Room',onPressed: (){
+
+            },),
+            const SizedBox(height: 20,),
           ],
         ),
       ),
     );
   }
 }
+
+class FeaturesListViewH extends StatelessWidget {
+  const FeaturesListViewH({
+    super.key,
+    required this.size,
+  });
+
+  final Size size;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 100,
+      child: ListView(
+        physics: const BouncingScrollPhysics(),
+        scrollDirection: Axis.horizontal,
+        children: [
+          buildCategoryItem(size, 'Free \nWifi', icon: FontAwesomeIcons.wifi),
+          const SizedBox(width: 20,),
+          buildCategoryItem(size, 'Non-\nRefundable', icon: FontAwesomeIcons.dollarSign),
+          const SizedBox(width: 20,),
+          buildCategoryItem(size, 'Free \nBreakfast', icon: FontAwesomeIcons.utensils),
+          const SizedBox(width: 20,),
+
+          buildCategoryItem(size, 'Non-\nSmoking', icon: FontAwesomeIcons.banSmoking),
+          const SizedBox(width: 20,),
+
+          buildCategoryItem(size, 'More', icon: FontAwesomeIcons.ellipsis),
+
+        ],
+      ),
+    );
+  }
+}
+
+
+
+SizedBox buildCategoryItem(Size size,String categories,{required IconData icon,}) {
+  return SizedBox(
+    child: Column(
+      children: [
+        Container(
+          height: size.height/16,
+          width: size.width/8,
+
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            color: AppColor.kPrimaryColor.withOpacity(0.2),
+          ),
+          child: Icon(icon,color: AppColor.kPrimaryColor,size: 22,),
+        ),
+        const SizedBox(height: 7,),
+        Text(categories,style: const TextStyle(fontSize: 10,),),
+      ],
+    ),
+  );
+}
+
+
+
+
+
+
 
 class Reviews extends StatelessWidget {
   const Reviews({

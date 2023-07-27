@@ -7,20 +7,17 @@ import '../../../../home/presentaion/views/main_view.dart';
 class LoginButton extends StatelessWidget {
   const LoginButton({
     super.key,
-    required this.size, required this.text,
+    required this.size, required this.text, required this.onPressed,
   });
 
   final String text;
   final Size size;
+  final void Function()onPressed;
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context){
-          return MainView();
-        }));
-      },
+      onPressed: onPressed,
       child:  Text(
         text,
         style:const TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w600),

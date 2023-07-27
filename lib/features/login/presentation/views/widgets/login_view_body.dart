@@ -4,6 +4,7 @@ import 'package:travel_booking/core/utils/app_color.dart';
 import 'package:travel_booking/core/widgets/text_filed.dart';
 import 'package:travel_booking/features/login/presentation/views/widgets/sign_in_container.dart';
 
+import '../../../../home/presentaion/views/main_view.dart';
 import 'login_button.dart';
 import 'login_widgets.dart';
 
@@ -35,7 +36,11 @@ class LoginViewBody extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              LoginButton(size: size,text: 'Sign In',),
+              LoginButton(size: size,text: 'Sign In',onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context){
+                  return const MainView();
+                }));
+              },),
               const SizedBox(
                 height: 20,
               ),

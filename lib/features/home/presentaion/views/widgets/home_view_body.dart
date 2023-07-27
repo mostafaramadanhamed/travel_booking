@@ -30,7 +30,7 @@ class HomeViewBody extends StatelessWidget {
     ) ;
   }
 
-  Column buildNonScrollable(Size size, List<String> categories) {
+  Column buildNonScrollable(Size size, List<String> categories,BuildContext context) {
     return Column(
           children: [
             TopContainer(size: size),
@@ -41,7 +41,14 @@ class HomeViewBody extends StatelessWidget {
                 //    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
 
-                  buildCategoryItem(size, categories[0],icon: FontAwesomeIcons.hotel),
+                  InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context){
+                        return ();
+                      }));
+                    },
+                      child
+                      : buildCategoryItem(size, categories[0],icon: FontAwesomeIcons.hotel)),
                   const SizedBox(width: 15,),
                   buildCategoryItem(size, categories[1],icon: FontAwesomeIcons.plane),
                   const SizedBox(width: 15,),
