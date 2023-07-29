@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:travel_booking/features/booking/presentation/views/seats_view.dart';
+import 'package:travel_booking/features/hotels/presentation/views/room_reviews.dart';
 
 import '../../../../../core/utils/app_color.dart';
 import '../../../../home/presentaion/views/hotel_details_view.dart';
@@ -139,7 +140,7 @@ class SelectRoomViewBody extends StatelessWidget {
                             const Spacer(),
                             TextButton(
                               onPressed: (){
-                                Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const SeatsView() ,
+                                Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const RoomReview() ,
                                 ));
                               },
                               child:  const Text(

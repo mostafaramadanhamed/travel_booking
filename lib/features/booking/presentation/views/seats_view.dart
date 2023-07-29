@@ -26,7 +26,7 @@ class SeatsView extends StatelessWidget {
           // Container as a background for ListView
           TopContainer(size: size),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            padding: const EdgeInsets.symmetric(horizontal: 12.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -40,32 +40,53 @@ class SeatsView extends StatelessWidget {
                         children: [
                           SizedBox(height: size.height/4.2,),
                           Container(
-                            width: 120,
-                            height: 120,
-                            padding: EdgeInsets.symmetric(horizontal: 12,vertical: 8),
+                            width: 140,
+                            height: 170,
+                            padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 8),
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(16)
                             ),
                             child: Column(
                               children: [
-                                Text('Seat'),
-                                Row(
+                                const SizedBox(height: 7,),
+                                const Text('Seat'),
+                                const SizedBox(height: 7,),
+                                const Row(
                                   children: [
                                     Icon(FontAwesomeIcons.personChalkboard,color:AppColor.kPrimaryColor,),
                                     Spacer(),
                                     Text('5B',style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600,color: AppColor.kPrimaryColor),)
                                   ],
                                 ),
+                                const SizedBox(height: 7,),
+                                const Text('Economy Class',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w600,),),
+                                const SizedBox(height: 10,),
+                                Container(
+                                  height: 40,
+                                  width:70,
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    color: AppColor.kPrimaryColor.withOpacity(.2),
+                                    borderRadius: BorderRadius.circular(16),
+                                  ),
+                                  child:const Text('\$275',style: TextStyle(fontSize: 14,fontWeight: FontWeight.w600,color: AppColor.kPrimaryColor),),
+                                ),
 
                               ],
                             ),
-                          ),
+                          ), 
+                          SizedBox(height:40),
+                          Text('XYZ',style: TextStyle(fontSize: 24,fontWeight: FontWeight.w600,color: AppColor.kPrimaryColor),),
+                          SizedBox(height:10),
+                          Icon(Icons.flight_outlined,color: AppColor.kPrimaryColor,size: 30,),
+                          SizedBox(height:10),
+                          Text('NYC',style: TextStyle(fontSize: 24,fontWeight: FontWeight.w600,color: AppColor.kPrimaryColor),),
                         ],
                       ),
                     ),
                     Expanded(
-                      flex: 6,
+                      flex: 5,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
@@ -349,9 +370,9 @@ color: AppColor.kPrimaryColor.withOpacity(.4)
                 ),
                 child: const Text('C'),
               ),
-              Spacer(),
-              Text('1'),
-              Spacer(),
+              const Spacer(),
+              const Text('1'),
+              const Spacer(),
               Container(
                 height: 25,
                 width: 25,
@@ -419,9 +440,9 @@ color: AppColor.kPrimaryColor.withOpacity(.4)
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
-              Spacer(),
-              Text('2'),
-              Spacer(),
+              const Spacer(),
+              const Text('2'),
+              const Spacer(),
       Container(
         height: 25,
         width: 25,
@@ -489,9 +510,9 @@ color: AppColor.kPrimaryColor.withOpacity(.4)
                 ),
                 child: const Text('C'),
               ),
-              Spacer(),
-              Text('3'),
-              Spacer(),
+              const Spacer(),
+              const Text('3'),
+              const Spacer(),
               Container(
                 height: 25,
                 width: 25,
@@ -559,9 +580,9 @@ color: AppColor.kPrimaryColor.withOpacity(.4)
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
-              Spacer(),
-              Text('4'),
-              Spacer(),
+              const Spacer(),
+              const Text('4'),
+              const Spacer(),
               Container(
                 height: 25,
                 width: 25,
@@ -629,9 +650,9 @@ color: AppColor.kPrimaryColor.withOpacity(.4)
                 ),
                 child: const Text('C'),
               ),
-              Spacer(),
-              Text('5'),
-              Spacer(),
+              const Spacer(),
+              const Text('5'),
+              const Spacer(),
               Container(
                 height: 25,
                 width: 25,
@@ -699,9 +720,9 @@ color: AppColor.kPrimaryColor.withOpacity(.4)
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
-              Spacer(),
-              Text('6'),
-              Spacer(),
+              const Spacer(),
+              const Text('6'),
+              const Spacer(),
               Container(
                 height: 25,
                 width: 25,
@@ -769,9 +790,9 @@ color: AppColor.kPrimaryColor.withOpacity(.4)
                 ),
                 child: const Text('C'),
               ),
-              Spacer(),
-              Text('7'),
-              Spacer(),
+              const Spacer(),
+              const Text('7'),
+              const Spacer(),
               Container(
                 height: 25,
                 width: 25,
