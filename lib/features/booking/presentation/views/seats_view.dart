@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:travel_booking/core/utils/app_color.dart';
 import 'package:travel_booking/features/login/presentation/views/widgets/login_button.dart';
 import '../../../hotels/presentation/views/widgets/hotel_view_body.dart';
@@ -13,7 +14,7 @@ class SeatsView extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColor.kPrimaryColor,
         elevation: 0,
-        title:  const Text('Select Room',style:TextStyle(
+        title:  const Text('Select Seats',style:TextStyle(
           color: Colors.white,
           fontWeight: FontWeight.w600,
           fontSize: 20,
@@ -25,22 +26,46 @@ class SeatsView extends StatelessWidget {
           // Container as a background for ListView
           TopContainer(size: size),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30.0),
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Expanded(
+                     Expanded(
                       flex: 4,
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Text('data')
+                          SizedBox(height: size.height/4.2,),
+                          Container(
+                            width: 120,
+                            height: 120,
+                            padding: EdgeInsets.symmetric(horizontal: 12,vertical: 8),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(16)
+                            ),
+                            child: Column(
+                              children: [
+                                Text('Seat'),
+                                Row(
+                                  children: [
+                                    Icon(FontAwesomeIcons.personChalkboard,color:AppColor.kPrimaryColor,),
+                                    Spacer(),
+                                    Text('5B',style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600,color: AppColor.kPrimaryColor),)
+                                  ],
+                                ),
+
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                     ),
                     Expanded(
-                      flex: 8,
+                      flex: 6,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
@@ -72,9 +97,10 @@ class PlaneShape extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: size.height/1.3,
-      width:size.width/1.7,
+      width:size.width/1.9,
       clipBehavior: Clip.antiAliasWithSaveLayer,
       padding: const EdgeInsets.only(top: 30,),
+      margin: EdgeInsets.zero,
       decoration:  BoxDecoration(
           color: Colors.white,
           borderRadius: const BorderRadius.only(
