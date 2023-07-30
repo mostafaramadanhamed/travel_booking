@@ -8,7 +8,7 @@ class RoomReview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: CustomAppBar(title: 'Select Room'),
+      appBar: customAppBar(title: 'Select Room'),
       body: const RoomReviewBody(),
     );
   }

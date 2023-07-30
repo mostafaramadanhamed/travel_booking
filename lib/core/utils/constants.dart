@@ -1,5 +1,6 @@
 
 import 'package:flutter/cupertino.dart';
+import 'package:travel_booking/features/booking/presentation/views/seats_view.dart';
 import 'package:travel_booking/features/home/presentaion/views/home_view.dart';
 
 const kPages=[
@@ -7,9 +8,7 @@ const kPages=[
   Center(
     child: Text('Favorite'),
   ),
-  Center(
-    child: Text('My Bookings'),
-  ),
+ SeatsView(),
   Center(
     child: Text('Profile'),
   ),

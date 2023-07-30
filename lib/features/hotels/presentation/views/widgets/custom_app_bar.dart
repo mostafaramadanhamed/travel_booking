@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import '../../../../../core/utils/app_color.dart';
 import '../../../../../core/utils/styles.dart';
 
-AppBar CustomAppBar({
+AppBar customAppBar({
   required String title
 
 }) {

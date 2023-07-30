@@ -35,10 +35,10 @@ class HotelDetailsListView extends StatelessWidget {
         const SizedBox(height: 10,),
         const CustomDivider(),
         const SizedBox(height: 10,),
-        RichText(text: const TextSpan(
+        RichText(text:  TextSpan(
             children: [
-              TextSpan(text: 'Information',style:Styles.textStyle22,),
-              TextSpan(text: '\n I must explain to you how all this mistaken idea of reprobating pleasure and extolling pain arose. To do so, I will give you a complete account of the system, and expound the actual tea',style:Styles.textStyle14,),
+              TextSpan(text: 'Information',style:Styles.textStyle22.copyWith(color: Colors.black),),
+              const  TextSpan(text: '\n I must explain to you how all this mistaken idea of reprobating pleasure and extolling pain arose. To do so, I will give you a complete account of the system, and expound the actual tea',style:Styles.textStyle14,),
             ]
         )),
         const SizedBox(height: 30,),

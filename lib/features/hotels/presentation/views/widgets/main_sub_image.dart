@@ -18,10 +18,10 @@ class MainImage extends StatelessWidget {
       alignment: Alignment.bottomCenter,
       width: size.width,
       height: size.height / 2.5,
-      margin: EdgeInsets.only(bottom: 20),
+      margin: const EdgeInsets.only(bottom: 20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
-        image: DecorationImage(
+        image: const DecorationImage(
           image: NetworkImage(
             'https://img.freepik.com/free-photo/luxury-classic-modern-bedroom-suite-hotel_105762-1787.jpg?size=626&ext=jpg&uid=R76923949&ga=GA1.1.409472889.1674466048&semt=sph',
           ),
@@ -55,7 +55,7 @@ class SubImages extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(width: 6, color: Colors.white70),
-                image: DecorationImage(
+                image: const DecorationImage(
                   image: NetworkImage(
                     'https://img.freepik.com/free-photo/type-entertainment-complex-popular-resort-with-pools-water-parks-turkey-with-more-than-5-million-visitors-year-amara-dolce-vita-luxury-hotel-resort-tekirova-kemer_146671-18728.jpg?size=626&ext=jpg&uid=R76923949&ga=GA1.1.409472889.1674466048&semt=sph',
                   ),
@@ -69,7 +69,7 @@ class SubImages extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(width: 6, color: Colors.white70),
-                image: DecorationImage(
+                image: const DecorationImage(
                   image: NetworkImage(
                     'https://img.freepik.com/free-photo/view-dubai-marina-sunrise-uae_268835-1056.jpg?size=626&ext=jpg&uid=R76923949&ga=GA1.1.409472889.1674466048&semt=sph',
                   ),
@@ -83,7 +83,7 @@ class SubImages extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(width: 6, color: Colors.white70),
-                image: DecorationImage(
+                image: const DecorationImage(
                   image: NetworkImage(
                     'https://img.freepik.com/free-photo/croissant-boiled-egg-orange-juice-yogurt-breakfast-tray-bed-hotel-room_176474-2601.jpg?size=626&ext=jpg&uid=R76923949&ga=GA1.1.409472889.1674466048&semt=sph',
                   ),
@@ -101,7 +101,7 @@ class SubImages extends StatelessWidget {
                 width: 6,
                 color: Colors.white70,
               ),
-              image: DecorationImage(
+              image: const DecorationImage(
                 image: NetworkImage(
                   'https://img.freepik.com/free-photo/beautiful-umbrella-chair-around-swimming-pool-hotel-resort_74190-2153.jpg?w=740&t=st=1690365578~exp=1690366178~hmac=09ad2fb6b64a2893ef004584af7533c41bd88e677d4e739ebb0b3bbb548dfb8e',
                 ),
@@ -113,11 +113,11 @@ class SubImages extends StatelessWidget {
                 width: size.width / 6,
                 decoration: BoxDecoration(
                   gradient:
-                  LinearGradient(colors: [Colors.black, Colors.black54]),
+                  const LinearGradient(colors: [Colors.black, Colors.black54]),
                   borderRadius: BorderRadius.circular(8),
                   color: Colors.white70,
                 ),
-                child: Center(
+                child: const Center(
                     child: Text(
                       '+8',
                       style: TextStyle(

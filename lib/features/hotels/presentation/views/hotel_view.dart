@@ -8,7 +8,7 @@ class HotelView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return   Scaffold(
-      appBar: CustomAppBar(title: 'Hotels'),
+      appBar: customAppBar(title: 'Hotels'),
       body:const HotelViewBody()
     );
 

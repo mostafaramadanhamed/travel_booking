@@ -19,7 +19,7 @@ class TravelBookingApp extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.poppinsTextTheme(),
       ),
-      home: LoginView(),
+      home: const LoginView(),
     );
   }
 }

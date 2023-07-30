@@ -8,7 +8,7 @@ class SelectRoomView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold( appBar:CustomAppBar(title: 'Select Room'),
+    return Scaffold( appBar:customAppBar(title: 'Select Room'),
       body: const SelectRoomViewBody(),
     );
   }

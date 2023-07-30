@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../core/utils/app_color.dart';
-import '../../../../booking/presentation/views/seats_view.dart';
-
 class ReviewItem extends StatelessWidget {
   const ReviewItem({
     super.key,

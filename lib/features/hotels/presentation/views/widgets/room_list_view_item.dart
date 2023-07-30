@@ -56,7 +56,7 @@ class RoomListViewItem extends StatelessWidget {
                   ],
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               Container(
                 margin: const EdgeInsets.symmetric(vertical: 8,horizontal: 16),
                 height: 70,

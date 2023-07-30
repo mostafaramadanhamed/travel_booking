@@ -35,7 +35,7 @@ class AllReviews extends StatelessWidget {
 
               children: [
                 RichText(
-                  text: const TextSpan(
+                  text:  const TextSpan(
                     children: [
                       TextSpan(
                         text: '4.6',
@@ -43,7 +43,7 @@ class AllReviews extends StatelessWidget {
                       ),
                       TextSpan(
                         text: '/5\n',
-                        style:Styles.textStyle18
+                        style:Styles.textStyle16
                       ),
                       TextSpan(
                         text: 'based on 125 Reviews',
