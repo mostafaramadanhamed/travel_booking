@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:travel_booking/core/utils/app_color.dart';
 import 'package:travel_booking/core/utils/constants.dart';
 import 'package:travel_booking/core/widgets/text_filed.dart';
 import 'package:travel_booking/features/login/presentation/views/widgets/sign_in_container.dart';

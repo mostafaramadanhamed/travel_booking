@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:travel_booking/core/utils/app_color.dart';
 import 'package:travel_booking/features/login/presentation/views/widgets/login_button.dart';
-import '../../../hotels/presentation/views/widgets/hotel_view_body.dart';
+import '../../../hotels/presentation/views/widgets/top_container.dart';
 
 class SeatsView extends StatelessWidget {
   const SeatsView({super.key});
