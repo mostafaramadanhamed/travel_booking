@@ -98,7 +98,7 @@ class HotelDetailsView extends StatelessWidget {
                 ],
               ),
             ),
-            LoginButton(size: size,text: 'Select Room',onPressed: (){
+            ButtonBottom(size: size,text: 'Select Room',onPressed: (){
               Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const SelectRoomView(),));
             },),
             const SizedBox(height: 20,),

@@ -96,7 +96,7 @@ class SeatsView extends StatelessWidget {
     ],),
     ),
          ], ),
-                LoginButton(size: size, text: "Confirm", onPressed: (){}),
+                ButtonBottom(size: size, text: "Confirm", onPressed: (){}),
               ],
             ),
       ),

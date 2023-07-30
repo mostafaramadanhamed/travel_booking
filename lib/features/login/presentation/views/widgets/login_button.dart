@@ -1,11 +1,11 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:travel_booking/core/utils/app_color.dart';
+import 'package:travel_booking/core/utils/styles.dart';
 
-import '../../../../home/presentaion/views/main_view.dart';
-
-class LoginButton extends StatelessWidget {
-  const LoginButton({
+class ButtonBottom extends StatelessWidget {
+  const ButtonBottom({
     super.key,
     required this.size, required this.text, required this.onPressed,
   });
@@ -18,16 +18,16 @@ class LoginButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: onPressed,
-      child:  Text(
-        text,
-        style:const TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w600),
-      ),
       style: TextButton.styleFrom(
 
           minimumSize: Size(size.width, 66),
-          backgroundColor: const Color(0xFFFB9057),
+          backgroundColor: AppColor.kSecondaryColor,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(16))),
+      child:  Text(
+        text,
+        style:Styles.textStyle20,
+      ),
     );
   }
 }

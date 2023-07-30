@@ -36,7 +36,7 @@ class LoginViewBody extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              LoginButton(size: size,text: 'Sign In',onPressed: (){
+              ButtonBottom(size: size,text: 'Sign In',onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context){
                   return const MainView();
                 }));
