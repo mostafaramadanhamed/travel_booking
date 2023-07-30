@@ -14,3 +14,12 @@ const kPages=[
     child: Text('Profile'),
   ),
 ];
+const kSocialLogin='You can Connect With';
+const kSignIn='Sign In';
+const kEmail='Email';
+const kPassword='Password';
+const kRememberMe='Remember Me';
+const kForgetPassword='Forget Password ?';
+const kSignUp='Sign Up';
+const kDontHaveAccount='Don\'t have an account ?';
+const kHi='Hi, Welcome back! ';

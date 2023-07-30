@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:travel_booking/core/utils/app_color.dart';
+import 'package:travel_booking/core/utils/constants.dart';
+import 'package:travel_booking/core/utils/styles.dart';
 
 class SignInContainer extends StatelessWidget {
   const SignInContainer({
@@ -24,18 +26,14 @@ class SignInContainer extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Text(
-            'Sign In',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 24,
-              fontWeight: FontWeight.w600,
-            ),
+            kSignIn,
+            style: Styles.textStyle24,
           ),
           SizedBox(
             height: 10,
           ),
           Text(
-            'Hi, Welcome back! ',
+            kHi,
             style: TextStyle(
               color: Colors.white,
             ),
