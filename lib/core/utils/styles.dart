@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_booking/core/utils/app_color.dart';
 
 abstract class Styles{
 
@@ -26,6 +27,16 @@ abstract class Styles{
   static const textStyle14 = TextStyle(
   fontSize: 14,
   fontWeight: FontWeight.normal,
+  );static const textStyle12 = TextStyle(
+  fontSize: 12,
+  color: AppColor.kSecondaryColor,
+  );static const textStyle11 = TextStyle(
+  fontSize: 11,
+    color: AppColor.kBottomNavIconColor,
+  );
+  static const textStyle10 = TextStyle(
+  fontSize: 10,
+  fontWeight: FontWeight.bold,
   );
 
 }

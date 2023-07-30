@@ -26,10 +26,10 @@ class _MainViewState extends State<MainView> {
     return BottomNavigationBar(
         unselectedIconTheme: const IconThemeData(color: AppColor.kBottomNavIconColor),
         items: [
-      bottomNavigationBarItem(icon: Icons.home, toolTip: 'Home',context: context ),
-      bottomNavigationBarItem(icon: Icons.favorite, toolTip: 'Favorite',context: context),
-      bottomNavigationBarItem(icon: Icons.business_center_rounded, toolTip: 'My bookings',context: context),
-      bottomNavigationBarItem(icon: Icons.person_pin, toolTip: 'Profile',context: context),
+      bottomNavigationBarItem(icon: Icons.home, toolTip: kHome,context: context ),
+      bottomNavigationBarItem(icon: Icons.favorite, toolTip: kFavorite,context: context),
+      bottomNavigationBarItem(icon: Icons.business_center_rounded, toolTip: kMyBookings,context: context),
+      bottomNavigationBarItem(icon: Icons.person_pin, toolTip: kProfile,context: context),
 
     ],
   onTap: (index) {

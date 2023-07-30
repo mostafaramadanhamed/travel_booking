@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../../core/utils/app_color.dart';
-import '../../../../home/presentaion/views/hotel_details_view.dart';
+import '../hotel_details_view.dart';
 import '../hotel_view.dart';
 
 class HotelViewBody extends StatelessWidget {

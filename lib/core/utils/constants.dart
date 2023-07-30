@@ -23,3 +23,12 @@ const kForgetPassword='Forget Password ?';
 const kSignUp='Sign Up';
 const kDontHaveAccount='Don\'t have an account ?';
 const kHi='Hi, Welcome back! ';
+const kHome='Home';
+
+  const kFavorite=  'Favorite';
+   const kMyBookings= 'My bookings';
+ const kProfile=   'Profile';
+
+ const kSeeAll='See All';
+ const kNearbyMe='Nearby Me';
+ const kPopular='Popular For Me';

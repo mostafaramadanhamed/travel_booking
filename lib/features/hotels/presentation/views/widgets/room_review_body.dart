@@ -3,7 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../core/utils/app_color.dart';
 import '../../../../booking/presentation/views/seats_view.dart';
-import '../../../../home/presentaion/views/hotel_details_view.dart';
+import '../hotel_details_view.dart';
 import 'hotel_view_body.dart';
 
 class RoomReviewBody extends StatelessWidget {

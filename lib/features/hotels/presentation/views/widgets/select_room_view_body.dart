@@ -4,7 +4,7 @@ import 'package:travel_booking/features/booking/presentation/views/seats_view.da
 import 'package:travel_booking/features/hotels/presentation/views/room_reviews.dart';
 
 import '../../../../../core/utils/app_color.dart';
-import '../../../../home/presentaion/views/hotel_details_view.dart';
+import '../hotel_details_view.dart';
 import 'hotel_view_body.dart';
 
 class SelectRoomViewBody extends StatelessWidget {
@@ -91,14 +91,14 @@ class SelectRoomViewBody extends StatelessWidget {
                         const SizedBox(height: 6,),
                         Row(
                           children: [
-                            buildCategoryItem(size, 'Free \nWifi', icon: FontAwesomeIcons.wifi),
+                            buildHomeCategoryItem(size, 'Free \nWifi', icon: FontAwesomeIcons.wifi),
                             const SizedBox(width: 20,),
-                            buildCategoryItem(size, 'Non-\nRefundable', icon: FontAwesomeIcons.dollarSign),
+                            buildHomeCategoryItem(size, 'Non-\nRefundable', icon: FontAwesomeIcons.dollarSign),
                             const SizedBox(width: 20,),
-                            buildCategoryItem(size, 'Free \nBreakfast', icon: FontAwesomeIcons.utensils),
+                            buildHomeCategoryItem(size, 'Free \nBreakfast', icon: FontAwesomeIcons.utensils),
                             const SizedBox(width: 20,),
 
-                            buildCategoryItem(size, 'Non-\nSmoking', icon: FontAwesomeIcons.banSmoking),
+                            buildHomeCategoryItem(size, 'Non-\nSmoking', icon: FontAwesomeIcons.banSmoking),
                             const SizedBox(width: 20,),
 
                           ],
