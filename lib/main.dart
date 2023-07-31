@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'features/login/presentation/views/login.dart';
+import 'features/splash/presentation/views/splash view.dart';
 
 void main() {
   runApp(const TravelBookingApp());
@@ -19,7 +20,7 @@ class TravelBookingApp extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.poppinsTextTheme(),
       ),
-      home: const LoginView(),
+      home: const SplashView(),
     );
   }
 }
