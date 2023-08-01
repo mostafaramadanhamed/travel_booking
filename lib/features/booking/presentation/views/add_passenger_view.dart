@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:travel_booking/core/utils/app_color.dart';
+import 'package:travel_booking/features/booking/presentation/views/add_cart_view.dart';
 import 'package:travel_booking/features/booking/presentation/views/widgets/book_flight_view_body.dart';
 import 'package:travel_booking/features/hotels/presentation/views/widgets/custom_app_bar.dart';
 import 'package:travel_booking/features/login/presentation/views/widgets/login_button.dart';
@@ -80,7 +81,14 @@ class _AddPassengerViewState extends State<AddPassengerView> {
                 buildAdultContainer(),
                 buildChildContainer(),
                 buildInfantContainer(),
-                ButtonBottom(size: size, text: 'Confirm', onPressed: (){},),
+                ButtonBottom(size: size, text: 'Done', onPressed: (){
+
+                  //todo refactor router
+                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return  const AddCardView();
+                  }));
+
+                },),
               ],
             ),
           )
