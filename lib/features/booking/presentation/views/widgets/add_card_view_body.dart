@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:travel_booking/features/booking/presentation/views/check_out_view.dart';
 
 import '../../../../login/presentation/views/widgets/login_button.dart';
 import 'add_card_text_fields.dart';
@@ -44,9 +45,9 @@ class AddCardViewBody extends StatelessWidget {
               ButtonBottom(size: size, text: 'Add Card', onPressed: (){
 
                 //todo refactor router
-                // Navigator.push(context, MaterialPageRoute(builder: (context){
-                //   return  const AddCardView();
-                // }));
+                Navigator.push(context, MaterialPageRoute(builder: (context){
+                  return  const CheckOutView();
+                }));
 
               },),
             ],
