@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import 'features/login/presentation/views/login.dart';
-import 'features/splash/presentation/views/splash view.dart';
+import 'features/splash/presentation/views/splash_view.dart';
 
 void main() {
   runApp(const TravelBookingApp());

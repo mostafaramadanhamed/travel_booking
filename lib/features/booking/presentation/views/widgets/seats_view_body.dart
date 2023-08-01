@@ -2,6 +2,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:travel_booking/features/booking/presentation/views/book_flight_view.dart';
 import 'package:travel_booking/features/booking/presentation/views/widgets/plane_seats.dart';
 import 'package:travel_booking/features/booking/presentation/views/widgets/seats_details.dart';
 
@@ -34,7 +35,12 @@ class SeatsViewBody extends StatelessWidget {
                     SeatDetails(size: size),
                     PlaneSeats(size: size),
                   ], ),
-                ButtonBottom(size: size, text: "Confirm", onPressed: (){}),
+                ButtonBottom(size: size, text: "Confirm", onPressed: (){
+                  //todo refactor router
+                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return const BookFlightView();
+                  }));
+                }),
               ],
             ),
           ),

@@ -7,10 +7,11 @@ class CustomTextFiled extends StatelessWidget {
     required this.hint,
     this.maxLines=1,
     this.onSaved,
-    this.keyboardType=TextInputType.text,
+    this.keyboardType=TextInputType.text,  this.obscureText=false,
   }) : super(key: key) ;
 
   final String ?hint;
+  final bool obscureText;
   final void Function(String?)? onSaved;
   final Function(String) ? onChange;
   final int maxLines;
@@ -18,6 +19,7 @@ class CustomTextFiled extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      obscureText: obscureText,
       onChanged: onChange,
       onSaved: onSaved,
       keyboardType:keyboardType ,
