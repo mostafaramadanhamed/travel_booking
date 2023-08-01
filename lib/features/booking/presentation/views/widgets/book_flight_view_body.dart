@@ -6,6 +6,7 @@ import 'package:intl/intl.dart';
 
 import '../../../../../core/utils/app_color.dart';
 import '../../../../login/presentation/views/widgets/login_button.dart';
+import '../add_passenger_view.dart';
 import 'custom_card.dart';
 import 'flight_direction.dart';
 
@@ -28,17 +29,7 @@ class BookFlightViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(children: [
-        Container(
-          height: size.height/15,
-          width: size.width,
-          margin: const EdgeInsets.only(bottom: 10),
-          decoration: const BoxDecoration(
-              color: AppColor.kPrimaryColor,
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(32),
-              )
-          ),
-        ),
+        SmallestContainer(size: size),
         const FlightDirection(),
         const SizedBox(
           height: 8,
@@ -70,14 +61,38 @@ class BookFlightViewBody extends StatelessWidget {
               const SizedBox(height: 15,),
               ButtonBottom(size: size, text: "Search", onPressed: (){
                 //todo refactor router
-                // Navigator.push(context, MaterialPageRoute(builder: (context){
-                //   return const BookFlightView();
-                // }));
+                Navigator.push(context, MaterialPageRoute(builder: (context){
+                  return  const AddPassengerView();
+                }));
               }),
             ],
           ),
         ),
       ]),
+    );
+  }
+}
+
+class SmallestContainer extends StatelessWidget {
+  const SmallestContainer({
+    super.key,
+    required this.size,
+  });
+
+  final Size size;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: size.height/15,
+      width: size.width,
+      margin: const EdgeInsets.only(bottom: 10),
+      decoration: const BoxDecoration(
+          color: AppColor.kPrimaryColor,
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(32),
+          )
+      ),
     );
   }
 }

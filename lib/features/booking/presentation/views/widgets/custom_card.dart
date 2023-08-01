@@ -25,7 +25,7 @@ class CustomCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(2)),
+          borderRadius: BorderRadius.circular(12)),
       child:  ListTile(
         leading:  FaIcon(icon,
             color:iconColor),
